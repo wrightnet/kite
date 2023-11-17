@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/square.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="./images/square.svg" type="image/x-icon" />
+    <link href="./css/output.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="min-h-screen w-full relative flex justify-center">
+      <div
+        class="side-padding pt-[25px] pb-0 flex justify-between items-center flex-wrap gap-5 absolute top-0 left-0 right-0"
+      >
+        <img src="./images/square.svg" alt="square_logo" />
+        <span
+          class="text-[#0055CC] font-bold text:bg-[rgba(0,106,255,0.1)] text-[600] cursor-text text-[16px]"
+          >Learn more</span
+        >
+      </div>
+
+      <div class="w-full">
+        <div
+          class="text-gray-800 p-[25px] side-padding w-full md:w-[640px] flex flex-col gap-4 pt-[150px] mx-auto text-lg sm:text-xl md:text-2xl"
+        >
+          <h2 class="text-center">
+            Thank you for verifying your invitation. Your account has beeen
+            updated. We will redirect you to the homepage.
+          </h2>
+          <div class="text-center text-5xl font-bold" id="countdown">10</div>
+          <div class="text-center mx-auto">
+            <img src="images/load.gif" class="img-fluid" width="150px" />
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="side-padding pb-[25px] pt-0 flex justify-between items-center absolute bottom-0 left-0 right-0"
+      >
+        <button
+          disabled
+          type="button"
+          class="text-[#0055CC] bg-transparent hover:bg-[rgba(0,106,255,0.1)] cursor-text py-3 px-2 font-bold rounded-md"
+        >
+          English
+        </button>
+      </div>
+    </div>
+
+    <script>
+      // Function to update the countdown timer
+      function updateCountdown() {
+        const countdownElement = document.getElementById("countdown");
+        let countdownValue = parseInt(countdownElement.innerText);
+
+        if (countdownValue > 0) {
+          countdownValue--;
+          countdownElement.innerText = countdownValue;
+        } else {
+          // Redirect to another page when the countdown reaches 0
+          window.location.href = "https://squareup.com/us/en?v=all";
+        }
+      }
+
+      // Call the updateCountdown function every second (1000 milliseconds)
+      const countdownInterval = setInterval(updateCountdown, 1000);
+    </script>
+  </body>
+</html>

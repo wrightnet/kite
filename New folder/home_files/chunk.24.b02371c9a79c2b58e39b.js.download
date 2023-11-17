@@ -1,0 +1,20 @@
+(window.webpackJsonp_ember_auto_import_=window.webpackJsonp_ember_auto_import_||[]).push([[24],{118:function(t,e,i){"use strict"
+function n(){return new Promise((t=>{var e;(null===(e=null===window||void 0===window?void 0:window.requestAnimationFrame)||void 0===e?void 0:e.call(window,(()=>t())))||t()}))}i.d(e,"a",(function(){return n}))},33:function(t,e,i){"use strict"
+i.r(e),i.d(e,"market_context_manager",(function(){return r}))
+var n=i(7),s=i(12),o=i(118)
+const r=class{constructor(t){Object(n.h)(this,t),this.marketContextManagerActivated=Object(n.d)(this,"marketContextManagerActivated",7),this.marketContextManagerDeactivated=Object(n.d)(this,"marketContextManagerDeactivated",7),this.active=!1,this.currentContext=void 0,this.stack=[]}initChildListObserver(){if(this.childListObserver)return
+const t=()=>{this.stack=[...this.el.children],this.currentContext=this.stack.length>0?this.stack[this.stack.length-1]:null}
+t(),this.childListObserver=new MutationObserver(t),this.childListObserver.observe(this.el,{childList:!0})}async getCurrentContext(){for(;!this.currentContext;)await Object(o.a)()
+return this.currentContext}contextEmptiedEventHandler({target:t}){t.remove(),this.stack.splice(this.stack.indexOf(t),1),0===this.stack.length&&this.deactivate()}windowKeydown(t){var e
+"Escape"!==t.key&&"Esc"!==t.key||null===(e=this.currentContext)||void 0===e||e.currentDialog.el.dismiss({origin:this.el})}async open(t,e){let i=e
+this.currentContext&&!t||(i=!0),i&&this.createNewContext(),await this.currentContext.open(t)}close(t){return this.currentContext.close(t),Promise.resolve()}createNewContext(){return this.activate(),this.el.appendChild(document.createElement(Object(s.a)("market-context"))),this.currentContext=this.el.lastElementChild,Promise.resolve()}deactivate(){this.active=!1,this.marketContextManagerDeactivated.emit()
+const t=document.scrollingElement
+return t&&(t.style.overflow=this.initialScrollingElementOverflowState),Promise.resolve()}activate(){if(!this.active){this.active=!0,this.marketContextManagerActivated.emit()
+const t=document.scrollingElement
+t&&(this.initialScrollingElementOverflowState=t.style.overflow)}return Promise.resolve()}handleMouseEvents(t){if("mousedown"===t.type)this.mouseDownEl=t.target.tagName
+else if("mouseup"===t.type){const e=t.target.tagName
+this.mouseDownEl===e&&t.target.tagName.toLowerCase()===Object(s.a)("market-context")&&this.currentContext.currentDialog.el.dismiss({origin:this.el})}}componentDidLoad(){this.initChildListObserver()}render(){return Object(n.f)(n.b,{class:"market-context-manager",onMouseDown:t=>this.handleMouseEvents(t),onMouseUp:t=>this.handleMouseEvents(t)},Object(n.f)("slot",null))}disconnectedCallback(){var t
+null===(t=this.childListObserver)||void 0===t||t.disconnect()}get el(){return Object(n.e)(this)}}
+r.style=":host,::slotted(*),*{box-sizing:border-box}:host([disabled]){cursor:not-allowed !important;}:host([disabled]) *,:host([disabled]) ::slotted(*){cursor:not-allowed !important;pointer-events:none !important;}:host{position:fixed;top:0;left:0;z-index:-1000;display:block;overflow:hidden;width:100vw;height:100%;opacity:0}:host([active]){z-index:2;opacity:1}"}}])
+
+//# sourceMappingURL=https://multipassui-production-c.squarecdn.com/assets/chunk.24.b02371c9a79c2b58e39b-f87107314dc4ee4c5ea0e0c32cb481b2.map

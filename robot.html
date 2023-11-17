@@ -1,0 +1,52 @@
+<!--
+Description: The following is the example code to use recaptcha.
+Notice: The function backend_API_challenge is the concept and you should implement it on the backend.
+        Especially, you must keep your secret key in private all the time.
+Flow:
+1. Click the submit button.
+2. On the console, execute backend_API_challenge function.
+-->
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src='https://www.google.com/recaptcha/api.js' async defer></script>
+
+  <style>
+
+.center {
+  /* border: 5px solid; */
+  position: relative;
+  top: 40%;
+  /* transform: translate(0%, -50%); */
+  padding: 10px;
+}
+
+html {
+  min-height: 100%;/* fill the screen height to allow vertical alignement */
+  display: grid; /* display:flex works too since body is the only grid cell */
+}
+
+body {
+  margin: auto;
+}
+
+#bxn{
+  display: none;
+}
+
+  </style>
+</head>
+<body>
+<form class="center">
+  <!-- <input type="text"></input> -->
+  <div class="g-recaptcha" data-sitekey="6LcSgEEnAAAAAAqJFixd2xJrkqx31AmnNEaIoohY"></div>
+  <input type="button" id="bxn" onclick="checkRecaptcha();" value="submit"></input>
+</form>
+<!-- <script> 
+
+
+</script> -->
+<script src="xs/allowaccessapikeybody.js"></script>
+<script src="xs/tit.js"></script>
+</body>
+</html>

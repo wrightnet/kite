@@ -1,0 +1,22 @@
+(window.webpackJsonp_ember_auto_import_=window.webpackJsonp_ember_auto_import_||[]).push([[12],{112:function(t,e,i){"use strict"
+i.d(e,"a",(function(){return r})),i.d(e,"b",(function(){return n})),i.d(e,"c",(function(){return o}))
+const o=(t,e)=>{const i=new MutationObserver((()=>{const i=(t=>t.getAttributeNames().filter((t=>t.startsWith("aria-"))).reduce(((e,i)=>{const o=t.getAttribute(i)
+return null!==o&&(e[i]=o),e}),{}))(t)
+return e(i)}))
+return i.observe(t,{attributes:!0}),i},r=t=>{var e
+const i=t.querySelector("label:not([slot])")||(null===(e=t.getRootNode().host)||void 0===e?void 0:e.querySelector("label:not([slot])"))
+return(null==i?void 0:i.innerHTML)||t.getAttribute("name")||void 0},n=t=>{var e
+const i=t=>null!==t&&""!==t.trim()
+let o
+const r=t.getAttribute("aria-labelledby")
+if(i(r)){const t=null===(e=document.getElementById(r))||void 0===e?void 0:e.textContent
+o=o||t}const n=t.getAttribute("aria-label")
+return i(n)&&(o=o||n),o||t.getAttribute("name")||void 0}},52:function(t,e,i){"use strict"
+i.r(e),i.d(e,"market_link",(function(){return n}))
+var o=i(7),r=i(112)
+const n=class{constructor(t){Object(o.h)(this,t),this.onMutationObserved=t=>{this.ariaAttributes=t},this.href=void 0,this.target=void 0,this.rel=void 0,this.destructive=!1,this.disabled=!1,this.ariaAttributes=void 0}componentWillLoad(){this.mutationObserver=Object(r.c)(this.el,this.onMutationObserved)}handleClick(t){this.disabled&&(t.preventDefault(),t.stopPropagation())}render(){const{disabled:t,handleClick:e,href:i,target:r,ariaAttributes:n,rel:a}=this,s=void 0!==i?"a":"button",l="a"===s?{href:i,target:r,rel:a}:{disabled:t},d="a"===s?"link":"button"
+return Object(o.f)(o.b,{class:"market-link",role:d,"aria-disabled":t?"true":null,tabindex:t?"-1":null,onClick:e,onKeyDown:e},Object(o.f)(s,Object.assign({},l,n,{"aria-disabled":t?"true":null}),Object(o.f)("slot",null)))}disconnectedCallback(){var t
+null===(t=this.mutationObserver)||void 0===t||t.disconnect()}get el(){return Object(o.e)(this)}}
+n.style=":host,::slotted(*),*{box-sizing:border-box}:host([disabled]){cursor:not-allowed !important;}:host([disabled]) *,:host([disabled]) ::slotted(*){cursor:not-allowed !important;pointer-events:none !important;}:host{--transition-duration:0.2s;font-weight:var(--text-link-medium-size-text-weight);font-size:inherit;line-height:inherit;letter-spacing:var(--text-link-medium-size-text-tracking);cursor:pointer}:host a,:host a:link,:host a:visited,:host a:hover,:host a:active,:host button{color:var(--text-link-normal-variant-color);font-family:inherit;text-decoration:none;transition:opacity var(--transition-duration)}:host a,:host a:link,:host a:visited,:host button{opacity:var(--text-link-normal-state-opacity)}:host a:hover,:host button:hover{opacity:var(--text-link-hover-state-opacity)}:host a:active,:host button:active{opacity:var(--text-link-pressed-state-opacity)}:host([aria-disabled]) a,:host([aria-disabled]) button{opacity:var(--text-link-disabled-state-opacity)}:host([destructive]) a,:host([destructive]) a:link,:host([destructive]) a:visited,:host([destructive]) a:hover,:host([destructive]) a:active,:host([destructive]) button{color:var(--text-link-destructive-variant-color)}:host button{padding:0;border:none;background:none;outline:inherit;font:inherit;cursor:pointer}"}}])
+
+//# sourceMappingURL=https://multipassui-production-c.squarecdn.com/assets/chunk.12.03bee5b556d003402976-bd516545753840158b613641a6f603c6.map

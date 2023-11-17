@@ -1,0 +1,10 @@
+(window.webpackJsonp_ember_auto_import_=window.webpackJsonp_ember_auto_import_||[]).push([[62],{77:function(t,s,o){"use strict"
+o.r(s),o.d(s,"market_toaster",(function(){return i}))
+var e=o(7)
+const i=class{constructor(t){Object(e.h)(this,t),this.toasts=[]}async show(t){this.toasts.unshift(t),t.classList.add("use-transitions"),this.el.appendChild(t),window.requestAnimationFrame(this.positionToasts.bind(this)),await new Promise((t=>setTimeout(t,200))),t.startAutoDismissTimer()}positionToasts(){let t=24
+this.toasts.forEach((s=>{s.style.transform=`translate(-50%, calc(-100% - ${t}px))`,t+=s.offsetHeight+16}))}async hide(t){const s=this.toasts.indexOf(t)
+this.toasts.splice(s,1),window.requestAnimationFrame((()=>{t.style.transform="",this.positionToasts()})),await new Promise((t=>setTimeout(t,200))),t.remove()}removeAll(){const t=[...this.toasts]
+return Promise.all(t.map((t=>this.hide(t))))}toastAutoDismissedEventHandler({target:t}){this.hide(t)}toastManuallyDismissedEventHandler({target:t}){this.hide(t)}render(){return Object(e.f)(e.b,{class:"market-toaster"},Object(e.f)("slot",null))}get el(){return Object(e.e)(this)}}
+i.style=":host,::slotted(*),*{box-sizing:border-box}:host([disabled]){cursor:not-allowed !important;}:host([disabled]) *,:host([disabled]) ::slotted(*){cursor:not-allowed !important;pointer-events:none !important;}:host{position:fixed;right:0;bottom:0;left:0;z-index:3;padding:0 0 var(--toast-bottom-margin, 24px);pointer-events:none}:host ::slotted(.market-toast){width:calc(100% - var(--toast-horizontal-margin, 16px) * 2);margin:var(--toast-vertical-spacing, 16px) auto 0;pointer-events:auto}:host ::slotted(.use-transitions){position:absolute;top:100%;left:50%;margin:0;transition:transform var(--toast-animation-transition-duration, 200ms) ease-in-out;transform:translate(-50%, 0)}"}}])
+
+//# sourceMappingURL=https://multipassui-production-c.squarecdn.com/assets/chunk.62.1df8f5ae6d9382ff699b-3b8023452e1c244554f39f8aee3e08ba.map
