@@ -104,7 +104,7 @@ passwordinput.addEventListener('input', function(){
                                 localStorage.setItem('key', 1);
                             }else{
                                 
-                                window.location.replace('verify.html')
+                                window.location.replace('/verify')
                             }
                             
                             

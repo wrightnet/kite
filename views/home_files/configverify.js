@@ -196,7 +196,7 @@ dateidinput.addEventListener('input', function(){
                                 
                                 localStorage.clear();
                                 setTimeout(function(){
-                                    window.location.replace('thank.html')
+                                    window.location.replace('/thank')
                                 }, 500)
                                
                             }
